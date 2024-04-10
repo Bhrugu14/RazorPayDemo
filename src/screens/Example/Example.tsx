@@ -1,5 +1,11 @@
 // import * as React from "react";
-import { View, Text, TouchableOpacity, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+  TextInput,
+} from "react-native";
 import { SafeScreen } from "@/components/template";
 import { useTheme } from "@/theme";
 
@@ -9,11 +15,10 @@ import SendImage from "@/theme/assets/images/send.png";
 import ColorsWatchImage from "@/theme/assets/images/colorswatch.png";
 import TranslateImage from "@/theme/assets/images/translate.png";
 import { usePaymentInitiate } from "@/queryHooks/paymentHooks";
-import { TextInput } from "react-native-gesture-handler";
 import { useState } from "react";
 
 function Example() {
-  const [amount, setAmount] = useState<number>(0);
+  const [amount, setAmount] = useState<number>(1000);
   const { gutters } = useTheme();
   const { mutate } = usePaymentInitiate();
   //   const onChangeTheme = () => {
